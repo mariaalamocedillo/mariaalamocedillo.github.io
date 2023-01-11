@@ -2,14 +2,10 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import SplineScene from '../SplineScene'
 import './index.scss'
-import React, { Suspense } from 'react';
+import React from 'react';
 
-const Spline = React.lazy(() => {
-    return new Promise(resolve => setTimeout(resolve, 4 * 1000)).then(
-      () => import("@splinetool/react-spline")
-    );
-  });
 
 
 const Home = () => {
@@ -54,10 +50,7 @@ const Home = () => {
             </div>
 
             <div className='canvas-container'>
-                <Suspense fallback={<Loader type='pacman' />}>
-                    <Spline scene="https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode" />
-                </Suspense>     
-
+                    <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
             </div>
             
         </div>

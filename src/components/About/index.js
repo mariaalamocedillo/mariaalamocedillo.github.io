@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import Loader from 'react-loaders'
-import React, { Suspense } from 'react';
-import Spline from '@splinetool/react-spline'
+import React from 'react';
+import SplineScene from '../SplineScene'
 
 
 
@@ -45,9 +45,7 @@ const About = () => {
         </div>
 
         <div className="canvas-cont">
-          <Suspense fallback={<Loader type='pacman' />}>
-            <Spline scene="https://prod.spline.design/Vide5dz4a-En2yRw/scene.splinecode" />
-          </Suspense>     
+          <SplineScene url={'https://prod.spline.design/Vide5dz4a-En2yRw/scene.splinecode'} />
         </div>
       </div>
 
