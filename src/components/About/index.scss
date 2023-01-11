@@ -7,3 +7,9 @@
   max-height: 90%;
   }
   
+  @media screen and (max-width: 1200px) {
+    .canvas-cont {
+      position: static;
+      transform: none;
+      }
+  }

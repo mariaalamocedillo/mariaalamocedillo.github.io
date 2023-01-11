@@ -118,7 +118,9 @@
     .page {
       position: initial;
     }
-  
+    p {
+      font-size: 14px !important;
+    }
     .container {
       position: initial;
       height: auto;
@@ -153,11 +155,5 @@
         }
       }
     }
-  
-    .stage-cube-cont {
-      position: initial;
-      width: 100%;
-      height: 0%;
-      overflow: visible;
-    }
+
   }
