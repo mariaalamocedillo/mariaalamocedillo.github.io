@@ -1,0 +1,50 @@
+/* Spinning Curved Text */
+.spinning-text-wrapper {
+  position: relative;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 450px;
+  height: 450px;
+}
+
+.spinning-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  animation: spin 35s linear infinite;
+
+  .spinning-title {
+    position: initial !important;
+    .spinning-letter{
+      &:hover {
+        color: #ffd700;
+      }
+    }
+  }
+}
+
+.spinning-text span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: 0 225px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning-text-wrapper img {
+  width: 75%;
+  height: auto;
+  filter: drop-shadow(10px 10px 5px hsla(0, 0%, 0%, 0.461));
+}

@@ -7,6 +7,8 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
+  width: 100vw;
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   color: #444;
   -webkit-font-smoothing: antialiased;

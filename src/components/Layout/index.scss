@@ -112,6 +112,66 @@
         color: #fff;
       }
     }
+  
+    .interact-zone {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35%;
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 90%;
+      height: 90%;
+
+      .interactive-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+
+      .flat-button {
+        color: #ffd700;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #ffd700;
+        margin-top: 25px;
+        float: left;
+        white-space: nowrap;
+        opacity: 0;
+        clear: both;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+        
+        &:hover {
+          background: #ffd700;
+          color: #333;
+        }
+
+      }
+  
+        h1 {
+          color: #fff;
+          margin-bottom: 0px;
+
+          &:after, &:before {
+            content: none;
+          }
+          
+          .text-animate-hover {
+            &:hover {
+              color: #ffd700;
+            }
+          }
+        }
+    }
+
   }
   
   @media screen and (max-width: 1200px) {
