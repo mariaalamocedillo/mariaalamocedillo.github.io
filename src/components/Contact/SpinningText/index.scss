@@ -40,6 +40,7 @@
   left: 50%;
   transform-origin: 0 225px;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -53,4 +54,15 @@
   width: 75%;
   height: auto;
   filter: drop-shadow(10px 10px 5px hsla(0, 0%, 0%, 0.461));
+}
+
+@media screen and (max-width: 768px) {
+  .spinning-text-wrapper {
+    width: 225px !important;
+    height: 225px !important;  
+  }
+  .spinning-text span {
+    transform-origin: 0 112px !important;
+  }
+  
 }

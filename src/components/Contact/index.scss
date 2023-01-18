@@ -79,3 +79,17 @@
       }
     }
   }
+
+    
+  @media screen and (max-width: 768px) {
+    .interact-zone {
+      position: static;
+      transform: none;
+      }
+    .interactive-content {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      transform: translate(-50%) !important;
+      }
+  }

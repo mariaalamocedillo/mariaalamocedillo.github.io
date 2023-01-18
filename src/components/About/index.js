@@ -31,18 +31,14 @@ const About = () => {
             I am María, a recent graduate in 
             <StyledEngineProvider injectFirst>
               <Tooltip />
-            </StyledEngineProvider> with a passion for learning and growth in the field.
+            </StyledEngineProvider> with a passion for learning and growth in the field
             . My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
             as well as experience with frameworks like Spring and Jakarta EE, and knowledge of both relational and non-relational databases.           
           </p>
           <p align="LEFT"> 
-            I am a strong problem solver with excellent communication and collaboration skills. In my free time, I am always seeking 
-            new learning opportunities to expand my knowledge in web and software development. I am excited to bring my skills and enthusiasm 
-            to a team and contribute to the creation of innovative and high-quality web applications. 
-          </p>
-          <p>
+            I am excited to bring my skills and enthusiasm to a team and contribute to the creation of innovative and high-quality web applications. 
             If you are looking for a dedicated and reliable web developer, please feel free to contact me. I am excited to discuss 
-            how I can join your team and continue to grow as a developer.
+            how I can help in your team and continue to grow as a developer.
           </p>
         </div>
 

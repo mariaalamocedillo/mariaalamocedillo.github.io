@@ -54,7 +54,7 @@ const Contact = () => {
 
     return (
         <> 
-      <div className='container contact-page'>
+      <div className='container-c contact-page'>
           <div className='text-zone'>
               <h1>
                   <AnimatedLetters 
@@ -66,7 +66,7 @@ const Contact = () => {
               <p>
               I am enthusiastic about using my web development skills to work on engaging projects. 
               If you have a project in mind or any questions about my skills, don't hesitate to 
-              contact me using the form or email button on the right!
+              contact me using the form or the email button!
               </p>
             <div className="contact-form">
               <form ref={form} onSubmit={sendEmail}>
