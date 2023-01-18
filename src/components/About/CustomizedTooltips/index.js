@@ -24,7 +24,7 @@ export default function CustomizedTooltips() {
         <HtmlTooltip
           title={
             <React.Fragment>
-              <img className='img-certificate' src="https://www.svgrepo.com/show/457147/certificate.svg" width={'15%'}/>
+              <img className='img-certificate' src="https://www.svgrepo.com/show/457147/certificate.svg" width={'15%'} alt={'Certificate svg logo'}/>
               <Typography color="inherit"><b>Certificate of Higher Education (HNC) on Web Applications Development</b></Typography>
               <hr />
               <ul>

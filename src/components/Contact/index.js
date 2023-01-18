@@ -1,20 +1,14 @@
+import React from 'react';
 import { useEffect, useState, useRef } from 'react'
 import Loader from 'react-loaders'
 import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
+import Draggable from 'react-draggable'
+import {Button, Dialog, DialogActions, 
+  DialogContent, DialogContentText, DialogTitle, Paper} from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters'
 import SpinningText from './SpinningText'
 import './index.scss'
-
-import React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Paper from '@mui/material/Paper';
-import Draggable from 'react-draggable';
 
 function PaperComponent(props) {
   return (
@@ -49,7 +43,7 @@ const Contact = () => {
           .sendForm("service_4lngnao","template_mottvc9", form.current, '5hn9SUszdgvgca1Av')
           .then(
             () => {
-              setOpen(true)
+              setOpen(true);
             },
             () => {
               alert('Failed to send the message, please try again')
