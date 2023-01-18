@@ -2,14 +2,14 @@ import React from "react"
 import './index.scss'
 
 
-const SpinningText = ({ text, size, children }) => {
+const SpinningText = ({ text, children }) => {
 
   const lenght = text.length;
   const deg = 360 / lenght;
 
   return (
-    <div className={`spinning-text-wrapper ${size}`}>
-      <div className={`spinning-text ${size}-txt`}>
+    <div className={`spinning-text-wrapper`}>
+      <div className={`spinning-text`}>
         <h1 className="spinning-title">
           {text.split("").map((letra, i) => (
             <span

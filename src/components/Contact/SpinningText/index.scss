@@ -9,6 +9,10 @@
   font-weight: bold;
   width: 450px;
   height: 450px;
+  animation-fill-mode: forwards !important;
+  animation: fadeInUp 2s 2s;
+  opacity: 0;
+
 }
 
 .spinning-text {
@@ -20,6 +24,8 @@
 
   .spinning-title {
     position: initial !important;
+    cursor: default;
+
     .spinning-letter{
       &:hover {
         color: #ffd700;

@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
+import { React, useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import React from 'react';
+import AnimatedLetters from '../AnimatedLetters'
+import Tooltip from './CustomizedTooltips'
 import SplineScene from '../SplineScene'
-
-
+import './index.scss'
+import { StyledEngineProvider } from '@mui/material/styles';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -29,11 +28,14 @@ const About = () => {
             />
           </h1>
           <p>
-            I am María, a recent graduate in Web Applications Development with a passion for learning and growth in the field. 
-            My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
+            I am María, a recent graduate in 
+            <StyledEngineProvider injectFirst>
+              <Tooltip />
+            </StyledEngineProvider> with a passion for learning and growth in the field.
+            . My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
             as well as experience with frameworks like Spring and Jakarta EE, and knowledge of both relational and non-relational databases.           
           </p>
-          <p align="LEFT">
+          <p align="LEFT"> 
             I am a strong problem solver with excellent communication and collaboration skills. In my free time, I am always seeking 
             new learning opportunities to expand my knowledge in web and software development. I am excited to bring my skills and enthusiasm 
             to a team and contribute to the creation of innovative and high-quality web applications. 

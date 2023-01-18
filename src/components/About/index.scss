@@ -6,6 +6,24 @@
   width: 50%;
   max-height: 90%;
   }
+
+.chip-studies {
+  font-size: 17px !important;
+  color: #ffd700 !important;
+}
+
+.chip-animate-hover {
+  cursor: default;
+
+  &:hover {
+    animation: headShake 1s;
+  }
+}
+
+  .img-certificate{
+    float: left;
+    margin-top: 4px;  
+  }
   
   @media screen and (max-width: 1200px) {
     .canvas-cont {

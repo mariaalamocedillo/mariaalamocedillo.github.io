@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Loader from 'react-loaders'
-import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import SpinningText from './SpinningText'
 import './index.scss'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -19,14 +18,14 @@ const Contact = () => {
   
     const sendEmail = (e) => {
         e.preventDefault()
-    
+        function cartel (){
+          alert("Email Sent!")
+        }
         emailjs
           .sendForm("service_4lngnao","template_mottvc9", form.current, '5hn9SUszdgvgca1Av')
           .then(
             () => {
-              alert('Message successfully sent!')
-
-              
+              cartel()
             },
             () => {
               alert('Failed to send the message, please try again')
@@ -89,12 +88,10 @@ const Contact = () => {
           </div>
           <div className="interact-zone">
             <span className='interactive-content'>
-              <SpinningText text="Thanks for passing by!    " size={'big'}>
-                <SpinningText text="Thanks for passing by!    " size={'small'}>
-                  <Link  onClick={() => window.open('https://drive.google.com/file/d/17Y5ZN3QsTdL1WXSLFbey04eKjVXuNNNs/view?usp=sharing', '_blank', 'noopener,noreferrer')} className='flat-button'>SEE MY CV</Link>
+                <SpinningText text="Thanks for passing by!    ">
+                  <Link onClick={() => window.open('https://drive.google.com/file/d/17Y5ZN3QsTdL1WXSLFbey04eKjVXuNNNs/view?usp=sharing', '_blank', 'noopener,noreferrer')} className='flat-button'>SEE MY CV</Link>
                   <Link onClick={() => window.location = 'mailto:maria.alamo.cedillo@gmail.com'} className='flat-button'>EMAIL ME</Link>
                 </SpinningText>
-              </SpinningText>
             </span>
           </div>
       </div>

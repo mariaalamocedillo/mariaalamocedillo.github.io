@@ -53,7 +53,7 @@ const Home = () => {
             </div>
 
             <div className='canvas-container'>
-                    <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
+                <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
             </div>
             
         </div>

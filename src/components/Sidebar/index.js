@@ -1,10 +1,9 @@
 import './index.scss'
-import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/Logo2.svg'
 import LogoSubtitle from '../../assets/images/LogoSub.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser, faSuitcase, faBars, faClose} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faHome, faUser} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'  
 
 const Sidebar = () => {
