@@ -6,10 +6,36 @@ import AnimatedLetters from '../AnimatedLetters'
 import SpinningText from './SpinningText'
 import './index.scss'
 
+import React from 'react';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Paper from '@mui/material/Paper';
+import Draggable from 'react-draggable';
+
+function PaperComponent(props) {
+  return (
+    <Draggable
+      handle="#draggable-dialog-title"
+      cancel={'[class*="MuiDialogContent-root"]'}
+    >
+      <Paper {...props} />
+    </Draggable>
+  );
+}
+
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const [open, setOpen] = React.useState(false);
     const form = useRef()
-
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+  
     useEffect(() => {
       return () => setTimeout(() => {
         setLetterClass('text-animate-hover')
@@ -18,14 +44,12 @@ const Contact = () => {
   
     const sendEmail = (e) => {
         e.preventDefault()
-        function cartel (){
-          alert("Email Sent!")
-        }
+
         emailjs
           .sendForm("service_4lngnao","template_mottvc9", form.current, '5hn9SUszdgvgca1Av')
           .then(
             () => {
-              cartel()
+              setOpen(true)
             },
             () => {
               alert('Failed to send the message, please try again')
@@ -94,6 +118,29 @@ const Contact = () => {
                 </SpinningText>
             </span>
           </div>
+      </div>
+      <div>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          PaperComponent={PaperComponent}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
+            Form sent!
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+            Thank you for reaching out to me through this form. 
+            I appreciate your interest and will be in touch with you soon. Have a great day!
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button autoFocus onClick={handleClose}>
+              Close
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
       <Loader type="pacman" />
     </>
