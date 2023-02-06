@@ -83,13 +83,12 @@
     
   @media screen and (max-width: 768px) {
     .interact-zone {
-      position: static;
-      transform: none;
+        width: 100% !important;
+        top: auto !important;
+        transform: translateY(0) !important;
       }
     .interactive-content {
       position: absolute !important;
-      top: 100% !important;
-      left: 0 !important;
-      transform: translate(-50%) !important;
+      top: 30% !important;  
       }
   }

@@ -58,11 +58,15 @@
 
 @media screen and (max-width: 768px) {
   .spinning-text-wrapper {
-    width: 225px !important;
-    height: 225px !important;  
+    left: 0;
+    width: 337.5px !important;
+    height: 337.5px !important;  
   }
   .spinning-text span {
-    transform-origin: 0 112px !important;
+    transform-origin: 0 168.75px !important;
   }
-  
+  .interact-zone {
+    width: 100%;
+    left: 0;
+}
 }

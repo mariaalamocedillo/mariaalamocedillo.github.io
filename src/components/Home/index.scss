@@ -112,15 +112,14 @@
     }
   
     .canvas-container {
-      z-index:-1;
-      width: 100%;
-      height: auto;
-      top: 150px;
-      right: 0;
       box-sizing: border-box;
-      margin: auto;
-      margin-top: 140px;
+      height: auto;
       left: 0;
+      margin: 140px auto auto;
+      right: 0;
+      top: 55%;
+      width: 100%;
+      z-index: -1;
 
       img {
         width: 100%;
