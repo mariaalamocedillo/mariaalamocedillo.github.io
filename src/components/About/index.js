@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState, useRef } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Tooltip from './CustomizedTooltips'
@@ -8,6 +8,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   useEffect(() => {
     return () => setTimeout(() => {
@@ -28,11 +29,11 @@ const About = () => {
             />
           </h1>
           <p>
-            I am María, a recent graduate in 
+            I am María, a recent graduate in &nbsp;
             <StyledEngineProvider injectFirst>
               <Tooltip />
-            </StyledEngineProvider> with a passion for learning and growth in the field
-            . My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
+            </StyledEngineProvider>&nbsp; with a passion for learning and growth in the field. 
+            My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
             as well as experience with frameworks like Spring and Jakarta EE, and knowledge of both relational and non-relational databases.           
           </p>
           <p align="LEFT"> 
@@ -43,7 +44,12 @@ const About = () => {
         </div>
 
         <div className="canvas-cont">
-          <SplineScene url={'https://prod.spline.design/Vide5dz4a-En2yRw/scene.splinecode'} />
+          {windowSize.current[0] < 768 ? (
+              <img src="../../assets/images/Board-technologies.png" alt="technologies In have experience with" />         
+            ) : (
+              <SplineScene url={'https://prod.spline.design/Vide5dz4a-En2yRw/scene.splinecode'} />
+            )}
+
         </div>
       </div>
 

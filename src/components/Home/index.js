@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
@@ -11,6 +11,7 @@ const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = " María".split("")
     const jobArray = "Web developer.".split("")
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
     useEffect(() => {
         return () => setTimeout(() => {
@@ -53,7 +54,11 @@ const Home = () => {
             </div>
 
             <div className='canvas-container'>
-                <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
+                {windowSize.current[0] < 768 ? (
+                    <span className="product-sold-out">Sold Out</span>
+                ) : (
+                    <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
+                )}
             </div>
             
         </div>

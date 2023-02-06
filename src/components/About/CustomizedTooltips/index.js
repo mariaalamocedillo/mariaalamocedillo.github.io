@@ -25,7 +25,7 @@ export default function CustomizedTooltips() {
           title={
             <React.Fragment>
               <img className='img-certificate' src="https://www.svgrepo.com/show/457147/certificate.svg" width={'15%'} alt={'Certificate svg logo'}/>
-              <Typography color="inherit"><b>Certificate of Higher Education (HNC) on Web Applications Development</b></Typography>
+              <Typography color="inherit"><b>Certificate of Higher Education (HNC) on Web Applications Development (2022)</b></Typography>
               <hr />
               <ul>
                 <li><em>{'Fundamentals of digital Marketing Certificate'}</em> {'-'} <u>{'Google Digital Garage'}</u></li>
