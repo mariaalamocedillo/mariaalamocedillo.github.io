@@ -2,6 +2,7 @@ import { React, useEffect, useState, useRef } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import Tooltip from './CustomizedTooltips'
+import TechBoardImg from '../../assets/images/Board-technologies.png'
 import SplineScene from '../SplineScene'
 import './index.scss'
 import { StyledEngineProvider } from '@mui/material/styles';
@@ -45,7 +46,7 @@ const About = () => {
 
         <div className="canvas-cont">
           {windowSize.current[0] < 768 ? (
-              <img src="../../assets/images/Board-technologies.png" alt="technologies In have experience with" />         
+              <img src={TechBoardImg} alt="technologies In have experience with"  />         
             ) : (
               <SplineScene url={'https://prod.spline.design/Vide5dz4a-En2yRw/scene.splinecode'} />
             )}

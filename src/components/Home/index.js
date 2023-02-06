@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import NameImg from '../../assets/images/name-img.png'
 import SplineScene from '../SplineScene'
 import './index.scss'
 import React from 'react';
@@ -55,8 +56,8 @@ const Home = () => {
 
             <div className='canvas-container'>
                 {windowSize.current[0] < 768 ? (
-                    <span className="product-sold-out">Sold Out</span>
-                ) : (
+                    <img src={NameImg} alt="3D model made with Spline"  />         
+              ) : (
                     <SplineScene url={'https://prod.spline.design/G2E5Gp1tTLVz1Ubr/scene.splinecode'} />
                 )}
             </div>
