@@ -1,0 +1,88 @@
+.tab-list {
+  padding-left: 0;
+  margin-bottom: 0;
+
+  .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    padding: 0.5rem 0.75rem;
+    height: 10px;    
+    font-family: 'Ubuntu Mono', monospace;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-bottom: solid #000000;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.tab-content {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  margin-top: -1.25px;
+  z-index: -1;
+
+  background: #FFFDFA;
+  border: 1px solid #000000;
+  border-radius: 0 5px 5px 5px;
+
+  .tab-content-grid{
+    padding: 0 30px 30px 30px;
+    height: 100%;
+    display: block;
+
+    .title-grid {
+      padding-left: 15px;
+      height: fit-content;
+    }
+    .content-grid {
+      height: 95%;
+      
+      .demo-grid {
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+
+        .video-demo {
+          display: block;
+          width: 60%;
+          margin: auto;
+        }
+      }
+
+      .info-grid {
+        p {
+          color: rgba(0, 0, 0, 0.67);
+          animation: none;
+          margin-top: 2px;
+        }
+      }
+      .techs-row { 
+        display: inline-block;
+        div {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+.tab-list-active {
+  border-bottom: solid white !important;
+}
+@media screen and (max-width: 900px) {
+  .container .projects-page {
+    position: fixed;
+    height: 70%;
+  }
+  .tab-content {
+    margin-bottom: 10px;
+  }
+  .demo-grid {
+    width: 100%;
+  }
+}
