@@ -83,12 +83,6 @@
           content: 'ABOUT';
         }
       }
-
-      a.projects-link {
-        &:after {
-          content: 'PROJECTS';
-        }
-      }
   
       a.contact-link {
         &:after {
@@ -152,8 +146,8 @@
 
        nav {
         display: inline-flex;
-        width: 70%;
-        right: 10px;
+        width: 60%;
+        right: 0;
         float: right;
         overflow: overlay;
         height: 60px;
