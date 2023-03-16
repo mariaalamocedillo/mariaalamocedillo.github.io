@@ -7,12 +7,14 @@ import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import CinemaDemo from '../../assets/videos/demo-cine.mp4'
+import NotesDemo from '../../assets/videos/notes-demo.mp4'
 import HangmanDemo from '../../assets/videos/ahorcado.webm'
 import ApiDemo from '../../assets/videos/api-web.mp4'
 import SpringLogo from '../../assets/images/badges-logos/spring-logo.png'
 import JakartaLogo from '../../assets/images/badges-logos/Jakarta.png'
 import ThymeleafLogo from '../../assets/images/badges-logos/thymeleaf.png'
 import ReactLogo from '../../assets/images/badges-logos/react.png'
+import MongoLogo from '../../assets/images/badges-logos/mongodb.svg'
 import APILogo from '../../assets/images/badges-logos/api.png'
 import MySQLLogo from '../../assets/images/badges-logos/mysql.png'
 import DockerLogo from '../../assets/images/badges-logos/docker.png'
@@ -89,32 +91,53 @@ const Projects = () => {
 
             </div>
 
-            <div className='tab-content' label="Appointments">
+            <div className='tab-content' label="Notes App">
             <Grid className='tab-content-grid' container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
               <Grid className='title-grid' item xs={12}>
-                <h2>Vaccination Scheduling System</h2>
+                <h2>
+                  Notes application&nbsp;	
+                  <Tooltip title="see code on Github" placement="right">
+                  <a className='tooltip' target="_blank" rel='noreferrer' href='https://github.com/mariaalamocedillo/App-Cine'>
+                      <FontAwesomeIcon icon={ faGithub } color='black' />  
+                  </a>
+                  </Tooltip>
+                </h2>
               </Grid>
               <Grid className='content-grid' container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid className='demo-grid' item md={6}>
-                  <img className='video-demo' alt="complex" src="https://mui.com/static/images/grid/complex.jpg" />
+                    <video autoPlay={true} loop={true} controls width="100%">
+                      <source src={NotesDemo} type="video/mp4"/>
+                      Sorry, your browser doesn't support videos.
+                    </video>
                 </Grid>
                 <Grid className='info-grid' item md={6}>
-                  <h3>Description</h3>
+                  <br />
                   <p>
-                  Web-based platform that enables individuals to schedule appointments for getting vaccinated. It has a 
-                  user-friendly interface and provides a convenient way for people to find available vaccination slots 
-                  from different Healthcare Centers and book their appointments. 
+                  The notes web application is a RESTful API service that allows users to manage their notes. The backend is built using 
+                  Spring and MongoDB, with authentication implemented using JSON Web Tokens (JWT). The API service provides endpoints for 
+                  creating, updating, retrieving, sending to other users, and deleting notes, as well as creating and managing user accounts.
+                  In the frontend, React is used to fetch and display the notes to the user.
                   </p>
                   <span>
                   <Stack direction="row" spacing={1}>
-                  <Chip
-                      avatar={<Avatar alt="Jakarta" src={JakartaLogo} />}
-                      label="Jakarta"
-                      variant="outlined"
-                    />
                     <Chip
                       avatar={<Avatar alt="Spring" src={SpringLogo} />}
                       label="Spring"
+                      variant="outlined"
+                    />
+                  <Chip
+                      avatar={<Avatar alt="MongoDB" src={MongoLogo} />}
+                      label="MongoDB"
+                      variant="outlined"
+                    />
+                    <Chip
+                      avatar={<Avatar alt="React" src={ReactLogo} />}
+                      label="React"
+                      variant="outlined"
+                    />
+                    <Chip
+                      avatar={<Avatar alt="API" src={APILogo} />}
+                      label="RESTful API"
                       variant="outlined"
                     />
                   </Stack>
