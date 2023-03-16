@@ -96,8 +96,13 @@ const Projects = () => {
               <Grid className='title-grid' item xs={12}>
                 <h2>
                   Notes application&nbsp;	
-                  <Tooltip title="see code on Github" placement="right">
-                  <a className='tooltip' target="_blank" rel='noreferrer' href='https://github.com/mariaalamocedillo/App-Cine'>
+                  <Tooltip title="see backend code on Github" placement="bottom">
+                  <a className='tooltip' target="_blank" rel='noreferrer' href='https://github.com/mariaalamocedillo/main-brain'>
+                      <FontAwesomeIcon icon={ faGithub } color='black' />  
+                  </a>
+                  </Tooltip>&nbsp;	
+                  <Tooltip title="see frontend code on Github" placement="right">
+                  <a className='tooltip' target="_blank" rel='noreferrer' href='https://github.com/mariaalamocedillo/Notes'>
                       <FontAwesomeIcon icon={ faGithub } color='black' />  
                   </a>
                   </Tooltip>
