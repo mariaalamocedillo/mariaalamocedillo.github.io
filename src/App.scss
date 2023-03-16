@@ -41,6 +41,15 @@ $primary-color: #ffd700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
+       url('./assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
