@@ -6,17 +6,17 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 function App() {
-  return (
-    
-    <>
-    <Routes>
-      <Route path={"/"} element={<Layout />}>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"/about"} element={<About />} />
-        <Route path={"/contact"} element={<Contact />} />
-      </Route>
-    </Routes>
-    </>
+  return (  
+  <>
+      <Routes>
+        <Route path={"/"} element={<Layout />}>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/about"} element={<About />} />
+          <Route path={"/projects"} element={<Projects />} />
+          <Route path={"/contact"} element={<Contact />} />
+        </Route>
+      </Routes>
+  </>
   );
 }
 

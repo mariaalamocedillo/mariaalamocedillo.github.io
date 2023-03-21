@@ -29,11 +29,11 @@ const About = () => {
               idx={15}
             />
           </h1>
-          <p>
-            I am María, a recent graduate in &nbsp;
+          <p className='inline-p'>
+            I am María, a recent graduate in &nbsp;</p>
             <StyledEngineProvider injectFirst>
               <Tooltip />
-            </StyledEngineProvider>&nbsp; with a passion for learning and growth in the field. 
+            </StyledEngineProvider>&nbsp; <p className='inline-p'>with a passion for learning and growth in the field. 
             My studies have given me a solid foundation in programming languages such as HTML, CSS, JavaScript, Java, and PHP, 
             as well as experience with frameworks like Spring and Jakarta EE, and knowledge of both relational and non-relational databases.           
           </p>
