@@ -89,6 +89,12 @@
           content: 'CONTACT';
         }
       }
+
+      a.projects-link {
+        &:after {
+          content: 'PROJECTS';
+        }
+      }
   
       a.portfolio-link {
         &:after {
